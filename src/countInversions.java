@@ -1,4 +1,3 @@
-import java.util.Arrays.*;
 /*
 Create two algorithms which count the number of inversions in an input sequence
 Input: An array A of n integers from 1 to n
@@ -101,6 +100,13 @@ void main() {
 
     /*
     Basically insertion sort but count the swaps
+    For each insertion or swap of element x leftwards means that the element
+    to the left must be greater than x, which means the element left of x and x
+    is an inversion pair. As we keep moving x leftwards, we will encounter every inversion pair
+    until eventually we meet an element that is not greater than x, we can stop swapping/inserting
+    and thus found all pairs
+
+
     O(n+k)
      */
     int algo2 ( int[] A, int n){
